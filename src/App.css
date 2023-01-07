@@ -1,4 +1,7 @@
 .App {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
 }
 
@@ -14,16 +17,18 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-self: center;
+  min-height: 100vh;
+  background: #222;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
+h1 {
+  color: #fff;
+}
 .App-link {
   color: #61dafb;
 }
@@ -35,4 +40,107 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  text-align: center;
+  width: 75%;
+  margin-bottom: 5%;
+}
+
+.btn-red {
+  background-color: red;
+  display: inline-block;
+}
+
+.btn-orange {
+  background-color: orange;
+  display: inline-block;
+}
+
+.button-container {
+  display: inline-block;
+}
+
+input[type=text] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-rows: minmax(300px, auto);
+  margin: 40px;
+  grid-auto-flow: dense;
+  grid-gap: 10px;
+}
+
+.container .card {
+  background: #333;
+  padding: 20px;
+  display: grid;
+  font-size: 20px;
+  place-items: center;
+  text-align: center;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.container .card:hover {
+  background: rgb(64, 64, 64);
+}
+
+.container .card:nth-child(1) {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.container .card:nth-child(2) {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.container .card:nth-child(3) {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.container .card:nth-child(4) {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.container .card:nth-child(5) {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+.container .card:nth-child(6) {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.container .card:nth-child(7) {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.counter {
+  font-size: 100px;
+}
+
+.next:hover {
+  background: rgb(158, 158, 158);
 }

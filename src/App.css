@@ -144,3 +144,22 @@ input[type=text] {
 .next:hover {
   background: rgb(158, 158, 158);
 }
+
+@media (orientation: landscape) {
+  .media-mode-landscape {
+    opacity: 1;
+  }
+  .media-mode-portrait {
+    opacity: 0.3;
+  }
+}
+
+@media (orientation: portrait) {
+  .media-mode-portrait {
+    opacity: 1;
+  }
+  .media-mode-landscape {
+    opacity: 0.3;
+  }
+}
+ 

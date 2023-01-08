@@ -1,6 +1,6 @@
 import './App.css';
 import React, {useState,useMemo,useEffect} from 'react';
-import { ApolloClient, InMemoryCache, ApolloProvider, useQuery, gql } from "@apollo/client";
+import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 
 // apollo client setup
 const client = new ApolloClient({
@@ -30,6 +30,7 @@ function App() {
   const getNewCharacterHandler = () => {
     var id = getRandomArbitrary(1,50)
     console.log(id)
+
     //GraphQL
     client.query({
       query: gql`
@@ -72,7 +73,6 @@ function App() {
 
         <div className="card">
           <h3>Heavy Counter</h3>
-          {/* <p>Calculation: {calculation}</p> */}
           <p className='counter'>{heavyCount}</p>
           <div className='button-container'>
             <button onClick={() => setHeavyCount((c) => c + 1)}>
@@ -97,10 +97,11 @@ function App() {
           </div>
         </div>
 
-        <div className="card">
-          <h3>Text Input Example: </h3>
-          <input type="text" onChange={valueChangeHandler}></input>
-          <p>{text}</p>
+        <div className="card next">
+          <div>
+            <p className="media-mode-portrait counter">Portrait</p>
+            <p className="media-mode-landscape counter">Landscape</p>
+          </div>
         </div>
 
         <div className="card">
@@ -118,6 +119,12 @@ function App() {
           <button onClick={getNewCharacterHandler}>
               Get New Random Character
             </button>
+        </div>
+
+        <div className="card">
+          <h3>Text Input Example: </h3>
+          <input type="text" onChange={valueChangeHandler}></input>
+          <p>{text}</p>
         </div>
 
         <div className="card next">
